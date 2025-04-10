@@ -29,7 +29,7 @@ end
 print("Timer object created successfully.")
 
 -- Правильные IEEE754 байты для 30% и 0%
-local start_data = {0x3E, 0x99, 0x99, 0x9A} -- 0.3 (30%) IEEE754 big-endian
+local start_data = {0x00, 0x00, 0x70, 0x35} -- 0.3 (30%) IEEE754 big-endian
 local stop_data = {0x00, 0x00, 0x00, 0x00}  -- 0.0 IEEE754
 
 function sendVESCDutyCommand(data_payload, duty_percent)
